@@ -7,7 +7,7 @@ fi
 
 if [ -n "${SOLR_INDEX_URL}" ]; then
   curl -v ${SOLR_INDEX_URL} -o ${JBOSS_HOME}/apollo-index.tar.gz
-  tar -xvf apollo-index.tar.gz --directory ${JBOSS_HOME}
+  tar -xvf ${JBOSS_HOME}/apollo-index.tar.gz --directory ${JBOSS_HOME}
 fi
 
 exec $JBOSS_HOME/bin/openshift-launch.sh
