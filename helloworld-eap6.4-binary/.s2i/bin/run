@@ -5,9 +5,9 @@ if [ -n "${SOLR_CONF_URL}" ]; then
   curl -v ${SOLR_CONF_URL} -o ${JBOSS_HOME}/conf/solrcore.properties
 fi
 
-if [ -n "${SOLR_INDEX_URL}" ]; then
-  curl -v ${SOLR_INDEX_URL} -o ${JBOSS_HOME}/apollo-index.tar.gz
-  tar -xvf ${JBOSS_HOME}/apollo-index.tar.gz --directory ${JBOSS_HOME}
+if [ -n "${COMPRESSED_ARCHIVE_URL}" ]; then
+  curl -v ${COMPRESSED_ARCHIVE_URL} -o ${COMPRESSED_ARCHIVE_DESTINATION}
+  tar -xvf ${COMPRESSED_ARCHIVE_DESTINATION} --directory ${JBOSS_HOME}
 fi
 
 exec $JBOSS_HOME/bin/openshift-launch.sh
