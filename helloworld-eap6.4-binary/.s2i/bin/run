@@ -1,4 +1,5 @@
 #!/bin/sh
+set -x
 
 
 #AVAILABLE PARAMETERS - All paramters are optional although some need to be coordinated if used
