@@ -19,6 +19,7 @@ if [ -n "${SOLR_CONF_URL}" ]; then
 
   mkdir "${SOLR_CONF_DIR}"
   curl -v ${SOLR_CONF_URL} -o ${SOLR_CONF_DIR}/solrcore.properties
+  chmod a+w ${SOLR_CONF_DIR}/solrcore.properties
 fi
 
 if [ -n "${COMPRESSED_ARCHIVE_URL}" ] && [ -n "${COMPRESSED_ARCHIVE_HOME}" ]; then
