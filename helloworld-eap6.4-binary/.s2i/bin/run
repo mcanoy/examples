@@ -18,6 +18,8 @@ if [ -n "${SOLR_CONF_URL}" ]; then
   fi
 
   mkdir "${SOLR_CONF_DIR}"
+  chmod 777 "${SOLR_CONF_DIR}"
+  chown 1001:1001 "${SOLR_CONF_DIR}"
   curl -v ${SOLR_CONF_URL} -o ${SOLR_CONF_DIR}/solrcore.properties
   chmod a+w ${SOLR_CONF_DIR}/solrcore.properties
 fi
