@@ -1,4 +1,4 @@
-FROM fabric8/s2i-java:1.3.4
+FROM redhat-openjdk-18/openjdk18-openshift
 ENV JAVA_APP_DIR=/deployments
 EXPOSE 8081
 COPY target/*.jar /deployments/
