@@ -12,8 +12,11 @@ public class VertxApp extends AbstractVerticle {
 		LocalDateTime time = LocalDateTime.now( ZoneId.of( ZoneId.SHORT_IDS.get("PST")));
 
 		vertx.createHttpServer()
-				.requestHandler(req -> req.response().end(String.format("Hello World from Vert.x %s!%n", time.toString())))
-				.listen(8082);
+                        
+				.requestHandler(req -> req.response()
+				        .putHeader("content-type", "text/html")
+				        .end(String.format("Hello World from Vert.x Pod <strong>%s!</strong>", System.getenv("HOSTNAME"))))
+				        .listen(8082);
 	}
 
 }
