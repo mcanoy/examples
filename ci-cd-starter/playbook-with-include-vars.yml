@@ -1,0 +1,21 @@
+---
+
+- name: "Install CI / CD Starter"
+  hosts: openshift
+
+  pre_tasks:
+
+  - include_vars:
+      file: 'vars/project-names.json'
+
+  - template:
+      src: templates/ci-cd-starter-vars.json
+      dest: vars/ci-cd-starter-vars.json
+
+  - include_vars:
+      dir: 'vars'
+
+  roles:
+    - openshift-defaults
+    - create-openshift-resources
+    - configure-nexus
