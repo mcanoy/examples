@@ -18,9 +18,10 @@
                 }
               },
               {
-                "filename": "https://raw.githubusercontent.com/rht-labs/openshift-templates/master/nodejs-build-pod-template.json",
+                "filename": "https://raw.githubusercontent.com/mcanoy/openshift-templates/nodejs/nodejs-build-pod-template.json",
                 "parameters": {
-                  "SOURCE_REPOSITORY_URL": "https://github.com/rht-labs/examples",
+                  "SOURCE_REPOSITORY_URL": "https://github.com/mcanoy/examples",
+                  "SOURCE_REPOSITORY_REF": "node-build-pod",
                   "SOURCE_CONTEXT_DIR" : "ci-cd-starter/builds/nodejs-build-pod"
                 }
               },
