@@ -18,6 +18,13 @@
                 }
               },
               {
+                "filename": "https://raw.githubusercontent.com/rht-labs/openshift-templates/master/nodejs-build-pod-template.json",
+                "parameters": {
+                  "SOURCE_REPOSITORY_URL": "https://github.com/rht-labs/examples",
+                  "SOURCE_CONTEXT_DIR" : "ci-cd-starter/builds/nodejs-build-pod"
+                }
+              },
+              {
                 "filename": "https://raw.githubusercontent.com/rht-labs/openshift-templates/master/mvn-build-pod-template.json",
                 "parameters": {
                   "SOURCE_REPOSITORY_URL": "https://github.com/rht-labs/examples",
